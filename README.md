@@ -4,6 +4,7 @@
 1) Clone the project
 ```shell
    $ git clone https://github.com/mushanga/goeuro-devtest.git
+   $ cd goeuro-devtest
 ```
 2) Create the executable jar
 ```shell
