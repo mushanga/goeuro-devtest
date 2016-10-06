@@ -16,6 +16,7 @@
    $ java -jar -Dfile.encoding=utf-8 target/goeurodevtest-0.0.1-SNAPSHOT.jar "berlin"
 ```
 > `-Dfile.encoding=utf-8` parameter is crucial not to use the system default encoding
+
 3) See the results
 
 ```shell
