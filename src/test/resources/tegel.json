@@ -1,0 +1,49 @@
+[
+    {
+        "_id": 450419,
+        "key": null,
+        "name": "Tegelen",
+        "fullName": "Tegelen, Netherlands",
+        "iata_airport_code": null,
+        "type": "location",
+        "country": "Netherlands",
+        "geo_position": {
+            "latitude": 51.34417,
+            "longitude": 6.13611
+        },
+        "locationId": 150080,
+        "inEurope": true,
+        "countryId": 160,
+        "countryCode": "NL",
+        "coreCountry": true,
+        "distance": null,
+        "names": {},
+        "alternativeNames": {}
+    },
+    {
+        "_id": 314826,
+        "key": null,
+        "name": "Berlin Tegel",
+        "fullName": "Berlin Tegel (TXL), Germany",
+        "iata_airport_code": "TXL",
+        "type": "airport",
+        "country": "Germany",
+        "geo_position": {
+            "latitude": 52.5548,
+            "longitude": 13.28903
+        },
+        "locationId": null,
+        "inEurope": true,
+        "countryId": 56,
+        "countryCode": "DE",
+        "coreCountry": true,
+        "distance": null,
+        "names": {
+            "es": "Berlín-Tegel",
+            "it": "Berlino Tegel",
+            "ca": "Berlín-Tegel",
+            "nl": "Berlijn Tegel"
+        },
+        "alternativeNames": {}
+    }
+]
