@@ -10,6 +10,6 @@ import java.util.List;
 @Validated
 public interface SuggestionService {
 
-	List<SuggestionResponseDTO> search(@NotBlank String name);
+    List<SuggestionResponseDTO> search(@NotBlank String name);
 
 }

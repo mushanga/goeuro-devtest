@@ -26,7 +26,7 @@ public class SuggestionExportServiceImpl implements SuggestionExportService {
     @Autowired
     private BeanConverterService beanConverter;
 
-    public void searchAndExport(String term, String outputFilename)  {
+    public void searchAndExport(String term, String outputFilename) {
 
         List<SuggestionOutputDTO> suggestionOutputs = suggestionService.search(term)
                 .stream()

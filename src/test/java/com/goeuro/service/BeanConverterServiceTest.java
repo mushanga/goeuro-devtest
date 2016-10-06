@@ -17,22 +17,24 @@ import javax.validation.ConstraintViolationException;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles("test")
-public class BeanConverterServiceTest extends TestBase{
+public class BeanConverterServiceTest extends TestBase {
     @Autowired
     private BeanConverterService beanConverter;
+
     @Test
     public void testSuggestionResponseToOutputTest() throws Exception {
         SuggestionResponseDTO suggestionResponse = createSuggestionResponse(450419L, "Tegelen", "location", 51.34417, 6.13611);
         SuggestionOutputDTO suggestionOutput = beanConverter.suggestionResponseToOutput(suggestionResponse);
 
-        Assert.assertEquals((Long)450419L,  suggestionOutput.getId());
-        Assert.assertEquals("Tegelen",  suggestionOutput.getName());
-        Assert.assertEquals("location",  suggestionOutput.getType());
-        Assert.assertEquals((Double) 51.34417,  suggestionOutput.getLatitude());
-        Assert.assertEquals((Double) 6.13611,  suggestionOutput.getLongitude());
+        Assert.assertEquals((Long) 450419L, suggestionOutput.getId());
+        Assert.assertEquals("Tegelen", suggestionOutput.getName());
+        Assert.assertEquals("location", suggestionOutput.getType());
+        Assert.assertEquals((Double) 51.34417, suggestionOutput.getLatitude());
+        Assert.assertEquals((Double) 6.13611, suggestionOutput.getLongitude());
     }
+
     @Test(expected = ConstraintViolationException.class)
-    public void testNullArg(){
+    public void testNullArg() {
         beanConverter.suggestionResponseToOutput(null);
     }
 

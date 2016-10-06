@@ -9,6 +9,6 @@ import javax.validation.constraints.NotNull;
 
 @Validated
 public interface BeanConverterService {
-	SuggestionOutputDTO suggestionResponseToOutput(@NotNull SuggestionResponseDTO suggestionResponseDTO);
+    SuggestionOutputDTO suggestionResponseToOutput(@NotNull SuggestionResponseDTO suggestionResponseDTO);
 
 }

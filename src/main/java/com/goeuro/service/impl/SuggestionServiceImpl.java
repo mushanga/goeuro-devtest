@@ -29,7 +29,7 @@ public class SuggestionServiceImpl implements SuggestionService {
     }
 
     @Bean
-    public RestTemplate getSuggestionRestTemplate(){
+    public RestTemplate getSuggestionRestTemplate() {
         return new RestTemplate();
     }
 }

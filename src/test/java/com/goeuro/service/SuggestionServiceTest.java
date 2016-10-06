@@ -28,7 +28,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles("test")
-public class SuggestionServiceTest extends TestBase{
+public class SuggestionServiceTest extends TestBase {
 
     private MockRestServiceServer mockServer;
 
@@ -58,23 +58,25 @@ public class SuggestionServiceTest extends TestBase{
         Assert.assertEquals((Long) 450419L, suggestions.get(0).getId());
         Assert.assertEquals("Tegelen", suggestions.get(0).getName());
         Assert.assertEquals("location", suggestions.get(0).getType());
-        Assert.assertEquals((Double)51.34417, suggestions.get(0).getGeoPosition().getLatitude());
-        Assert.assertEquals((Double)6.13611, suggestions.get(0).getGeoPosition().getLongitude());
+        Assert.assertEquals((Double) 51.34417, suggestions.get(0).getGeoPosition().getLatitude());
+        Assert.assertEquals((Double) 6.13611, suggestions.get(0).getGeoPosition().getLongitude());
 
         Assert.assertEquals((Long) 314826L, suggestions.get(1).getId());
         Assert.assertEquals("Berlin Tegel", suggestions.get(1).getName());
         Assert.assertEquals("airport", suggestions.get(1).getType());
-        Assert.assertEquals((Double)52.5548, suggestions.get(1).getGeoPosition().getLatitude());
-        Assert.assertEquals((Double)13.28903, suggestions.get(1).getGeoPosition().getLongitude());
+        Assert.assertEquals((Double) 52.5548, suggestions.get(1).getGeoPosition().getLatitude());
+        Assert.assertEquals((Double) 13.28903, suggestions.get(1).getGeoPosition().getLongitude());
 
         mockServer.verify();
     }
+
     @Test(expected = ConstraintViolationException.class)
-    public void testNullTerm(){
+    public void testNullTerm() {
         suggestionService.search(null);
     }
+
     @Test(expected = ConstraintViolationException.class)
-    public void testBlankTerm(){
+    public void testBlankTerm() {
         suggestionService.search("    ");
     }
 

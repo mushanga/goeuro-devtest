@@ -9,12 +9,12 @@ import java.util.Objects;
 
 @Service
 public class BeanConverterServiceImpl implements BeanConverterService {
-    public SuggestionOutputDTO suggestionResponseToOutput(SuggestionResponseDTO suggestionResponseDTO){
+    public SuggestionOutputDTO suggestionResponseToOutput(SuggestionResponseDTO suggestionResponseDTO) {
         SuggestionOutputDTO suggestionOutputDTO = new SuggestionOutputDTO();
         suggestionOutputDTO.setId(suggestionResponseDTO.getId());
         suggestionOutputDTO.setName(suggestionResponseDTO.getName());
         suggestionOutputDTO.setType(suggestionResponseDTO.getType());
-        if(Objects.nonNull(suggestionResponseDTO.getGeoPosition())){
+        if (Objects.nonNull(suggestionResponseDTO.getGeoPosition())) {
             suggestionOutputDTO.setLatitude(suggestionResponseDTO.getGeoPosition().getLatitude());
             suggestionOutputDTO.setLongitude(suggestionResponseDTO.getGeoPosition().getLongitude());
         }

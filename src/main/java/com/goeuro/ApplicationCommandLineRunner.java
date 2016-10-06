@@ -27,20 +27,20 @@ public class ApplicationCommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        if(args == null || args.length == 0) throw new IllegalArgumentException("Command line argument must exist");
+        if (args == null || args.length == 0) throw new IllegalArgumentException("Command line argument must exist");
 
         String term = Arrays.asList(args)
                 .stream()
                 .collect(Collectors.joining(" "))
                 .trim();
-        try{
+        try {
             suggestionExportService.searchAndExport(term, outputFilename);
-        }catch (ConstraintViolationException e){
+        } catch (ConstraintViolationException e) {
             throw new IllegalArgumentException(
-                    "Argument(s) invalid: "+ e.getConstraintViolations()
-                        .stream()
-                        .map(cv -> "["+cv.getMessage()+"]")
-                        .collect(Collectors.joining(", ")),
+                    "Argument(s) invalid: " + e.getConstraintViolations()
+                            .stream()
+                            .map(cv -> "[" + cv.getMessage() + "]")
+                            .collect(Collectors.joining(", ")),
                     e);
         }
 
