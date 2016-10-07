@@ -17,7 +17,6 @@ import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestTemplate;
 
 import javax.validation.ConstraintViolationException;
-import java.io.IOException;
 import java.util.List;
 
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
@@ -48,7 +47,7 @@ public class SuggestionServiceTest extends TestBase {
     }
 
     @Test
-    public void testSuggestionService() throws IOException {
+    public void testSuggestionService() {
         mockServer.expect(requestTo(suggestionWSUrl.replace("{term}", TERM)))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withSuccess(getMockServiceResponseContent(), MediaType.APPLICATION_JSON));
