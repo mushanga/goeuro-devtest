@@ -22,3 +22,9 @@
 ```shell
    $ cat results.csv
 ```
+
+5) Run the tests
+
+```shell
+   $ mvn test
+```
