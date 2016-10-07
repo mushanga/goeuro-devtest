@@ -17,7 +17,7 @@
 ```
 > `-Dfile.encoding=utf-8` parameter is crucial not to use the system default encoding
 
-3) See the results
+4) See the results
 
 ```shell
    $ cat results.csv
